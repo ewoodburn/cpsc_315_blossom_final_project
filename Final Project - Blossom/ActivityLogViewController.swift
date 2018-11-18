@@ -18,7 +18,7 @@ class ActivityLogViewController: UIViewController {
     @IBOutlet var stepCountLabel: UILabel!
     @IBOutlet var hoursLoggedLabel: UILabel!
     
-    var storedActivity: Activity? = nil
+    //var storedActivity: Activity? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,33 +39,14 @@ class ActivityLogViewController: UIViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         if let identifier = segue.identifier{
-            if identifier == "LogNewActivitySegue"{
-                print("segue to log new activity view controller")
-            }
             if identifier == "ViewActivityHistorySegue"{
-                if let activityHistoryVC = segue.destination as? ActivityHistoryViewController{
-                    if let currStoredActivity = storedActivity{
-                        activityHistoryVC.newActivity = currStoredActivity
-                        print("segue to activity history view controller")
-
-                    }
-                }
+                print("segue to activity history view controller")
             }
+            
         }
     }
     
-    @IBAction func unwindToActivityLogViewController(segue: UIStoryboardSegue){
-        if let identifier = segue.identifier{
-            if identifier == "SaveUnwindSegue"{
-                if let logActivityVC = segue.source as? LogNewActivityViewController{
-                    if let newActivity = logActivityVC.newActivity{
-                        storedActivity = newActivity
-                    }
-                }
-                
-            }
-        }
-    }
+
 
 
 }
