@@ -120,7 +120,7 @@
             </objects>
             <point key="canvasLocation" x="2048.8000000000002" y="142.57871064467767"/>
         </scene>
-        <!--Activity Log View Controller-->
+        <!--Activity Log-->
         <scene sceneID="fpB-95-mHa">
             <objects>
                 <viewController id="TE6-YS-Fuq" customClass="ActivityLogViewController" customModule="Final_Project___Blossom" customModuleProvider="target" sceneMemberID="viewController">
@@ -196,7 +196,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h0n-sn-mJa"/>
                     </view>
-                    <navigationItem key="navigationItem" id="t27-Sb-rWq"/>
+                    <navigationItem key="navigationItem" title="Activity Log" id="t27-Sb-rWq"/>
                     <connections>
                         <outlet property="activityLogLabel" destination="zNn-34-fGL" id="xun-iz-bcA"/>
                         <outlet property="calendarLabel" destination="tWO-Ka-DKc" id="Ynp-54-3QD"/>
@@ -209,7 +209,7 @@
             </objects>
             <point key="canvasLocation" x="3959.1999999999998" y="109.29535232383809"/>
         </scene>
-        <!--Log New Activity View Controller-->
+        <!--Add a New Activity-->
         <scene sceneID="eFJ-85-ZPO">
             <objects>
                 <viewController id="zdV-rL-3dJ" customClass="LogNewActivityViewController" customModule="Final_Project___Blossom" customModuleProvider="target" sceneMemberID="viewController">
@@ -324,6 +324,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BLt-T5-0Jq"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Add a New Activity" id="jVi-kE-vRC"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="activityTypeLabel" destination="4DM-ts-Vu7" id="dC3-8X-iy4"/>
@@ -341,7 +342,7 @@
             </objects>
             <point key="canvasLocation" x="5932" y="638.2308845577212"/>
         </scene>
-        <!--Activity Log-->
+        <!--Activity History-->
         <scene sceneID="hio-dd-WLv">
             <objects>
                 <viewController id="mag-Qt-1GA" customClass="ActivityHistoryTableViewController" customModule="Final_Project___Blossom" customModuleProvider="target" sceneMemberID="viewController">
@@ -408,7 +409,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HNb-uL-ptk"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Activity Log" id="bZO-aG-KQ8">
+                    <navigationItem key="navigationItem" title="Activity History" id="bZO-aG-KQ8">
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="4RJ-tR-Uq4">
                                 <connections>
