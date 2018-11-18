@@ -107,6 +107,7 @@ class ActivityHistoryTableViewController: UIViewController, UITableViewDataSourc
     @IBAction func editBarButtonPressed(_ sender: UIBarButtonItem) {
         let newEditing = !tableView.isEditing
         tableView.setEditing(newEditing, animated: true)
+        //
     }
 
 
