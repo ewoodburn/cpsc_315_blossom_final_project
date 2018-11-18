@@ -1,14 +1,15 @@
 //
 //  ViewController.swift
 //  Final Project - Blossom
-//
-//  Created by Emma Woodburn on 11/17/18.
+//  Icon from https://www.flaticon.com/free-icon/lotus-flower_1151960#term=flower&page=1&position=5
+//  Created by Emma Woodburn and Ariana Hibbard on 11/17/18.
 //  Copyright © 2018 Emma Woodburn. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
