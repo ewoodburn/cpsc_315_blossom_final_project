@@ -13,6 +13,8 @@
 		4B56745821A0E3CB007C1B70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B56745721A0E3CB007C1B70 /* Assets.xcassets */; };
 		4B56745B21A0E3CB007C1B70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B56745921A0E3CB007C1B70 /* LaunchScreen.storyboard */; };
 		4B56746321A0E642007C1B70 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B56746221A0E642007C1B70 /* LoginViewController.swift */; };
+		4B56746521A0E9FD007C1B70 /* ActivityLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B56746421A0E9FD007C1B70 /* ActivityLogViewController.swift */; };
+		4B56746721A0F1CE007C1B70 /* LogNewActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B56746621A0F1CE007C1B70 /* LogNewActivityViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		4B56745A21A0E3CB007C1B70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B56745C21A0E3CB007C1B70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B56746221A0E642007C1B70 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4B56746421A0E9FD007C1B70 /* ActivityLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityLogViewController.swift; sourceTree = "<group>"; };
+		4B56746621A0F1CE007C1B70 /* LogNewActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogNewActivityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				4B56746221A0E642007C1B70 /* LoginViewController.swift */,
 				4B56744D21A0E3CA007C1B70 /* AppDelegate.swift */,
 				4B56745121A0E3CA007C1B70 /* Main.storyboard */,
+				4B56746621A0F1CE007C1B70 /* LogNewActivityViewController.swift */,
+				4B56746421A0E9FD007C1B70 /* ActivityLogViewController.swift */,
 				4B56745721A0E3CB007C1B70 /* Assets.xcassets */,
 				4B56745921A0E3CB007C1B70 /* LaunchScreen.storyboard */,
 				4B56745C21A0E3CB007C1B70 /* Info.plist */,
@@ -138,7 +144,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B56746521A0E9FD007C1B70 /* ActivityLogViewController.swift in Sources */,
 				4B56746321A0E642007C1B70 /* LoginViewController.swift in Sources */,
+				4B56746721A0F1CE007C1B70 /* LogNewActivityViewController.swift in Sources */,
 				4B56744E21A0E3CA007C1B70 /* AppDelegate.swift in Sources */,
 				4B56745621A0E3CA007C1B70 /* Final_Project___Blossom.xcdatamodeld in Sources */,
 			);
