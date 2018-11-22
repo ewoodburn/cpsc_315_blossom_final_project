@@ -28,7 +28,11 @@ class ActivityHistoryTableViewCell: UITableViewCell {
     func update(with activity: Activity) {
         typeLabel.text = activity.activityType
         timeLabel.text = activity.timeSpent
-        dateLabel.text = activity.date
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        let currDate = activity.date as! Date  
+        let dateString = dateFormatter.string(from: currDate)
+        dateLabel.text = dateString
     }
 
 }

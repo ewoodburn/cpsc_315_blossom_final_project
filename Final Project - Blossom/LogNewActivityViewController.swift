@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class LogNewActivityViewController: UIViewController {
     //setting up the connections to the UI elements
@@ -18,6 +19,9 @@ class LogNewActivityViewController: UIViewController {
     @IBOutlet var dateLoggedTextField: UITextField!
     @IBOutlet var personalNotesLabel: UILabel!
     @IBOutlet var personalNotesTextField: UITextField!
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
     
     //the new activity to be stored
     var newActivity: Activity? = nil
@@ -35,12 +39,40 @@ class LogNewActivityViewController: UIViewController {
         if let identifier = segue.identifier{
             if identifier == "SaveUnwindSegue"{
                 if let activityType = activityTypeTextField.text, let timeSpent = timeSpentTextField.text, let date = dateLoggedTextField.text, let personalNotes = personalNotesTextField.text{
-                    var activity = Activity(activityType: activityType, timeSpent: timeSpent, date: date, personalNotes: personalNotes)
-                    newActivity = activity
+                    let dateFormatter = DateFormatter()
+
+                    dateFormatter.dateFormat = "MM/dd/yyyy"
+                    if let formattedDate = dateFormatter.date(from: date){
+                        var userActivity = Activity(context: context)
+                        userActivity.date = formattedDate as NSDate
+                        userActivity.activityType = activityType
+                        userActivity.timeSpent = timeSpent
+                        userActivity.personalNotes = personalNotes
+                        //userActivity.
+                        self.newActivity = userActivity
+
+
+                    }
+                    
                     
                 }
             }
         }
+    }
+    
+    /**
+     Checks to see if the Date is formatted correctly.
+     
+     - Parameter dateString: The String representation of the Date
+     - Returns: True if the Date is formatted correctly. False otherwise.
+     */
+    func isDateFormatted(dateString: String) -> Bool{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        if let date = dateFormatter.date(from: dateString){
+            return true
+        }
+        return false
     }
 
 

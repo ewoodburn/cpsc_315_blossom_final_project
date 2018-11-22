@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import CoreData
+
 
 class ActivityHistoryTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
     
     var activities = [Activity]()
     @IBOutlet var tableView: UITableView!
@@ -21,6 +24,7 @@ class ActivityHistoryTableViewController: UIViewController, UITableViewDataSourc
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        loadActivities()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -66,8 +70,10 @@ class ActivityHistoryTableViewController: UIViewController, UITableViewDataSourc
     //this functions allows for deleting a cell in the tableView
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            context.delete(activities[indexPath.row])
             activities.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
+            saveActivities()
         }
     }
     
@@ -88,8 +94,9 @@ class ActivityHistoryTableViewController: UIViewController, UITableViewDataSourc
             if identifier == "SaveUnwindSegue"{
                 if let addActivityVC = segue.source as? LogNewActivityViewController{
                     if let currActivity = addActivityVC.newActivity{
+                        print("HERE!!!!!!!!")
                         activities.append(currActivity)
-                        tableView.reloadData()
+                        saveActivities()
                     }
                 }
             }
@@ -108,6 +115,30 @@ class ActivityHistoryTableViewController: UIViewController, UITableViewDataSourc
         let newEditing = !tableView.isEditing
         tableView.setEditing(newEditing, animated: true)
         //
+    }
+    
+    
+    func loadActivities(){
+        let request: NSFetchRequest<Activity> = Activity.fetchRequest()
+        
+        do{
+            activities = try context.fetch(request)
+        }
+        catch{
+            print("Error fetching activities")
+        }
+        tableView.reloadData()
+    }
+    
+    func saveActivities(){
+        do{
+            try context.save()
+        }
+        catch{
+            print("error saving activites")
+        }
+        
+        self.tableView.reloadData()
     }
 
 
