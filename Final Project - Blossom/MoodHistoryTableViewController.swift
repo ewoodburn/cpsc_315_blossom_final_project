@@ -9,7 +9,10 @@
 import UIKit
 
 class MoodHistoryTableViewController: UITableViewController {
-
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    var moods:[Mood] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,6 +23,9 @@ class MoodHistoryTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
+    @IBAction func editBarButtonPressed(_ sender: UIBarButtonItem) {
+        print("edit bar button pressed")
+    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
