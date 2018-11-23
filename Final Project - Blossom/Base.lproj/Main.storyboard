@@ -88,7 +88,7 @@
                                                 <rect key="frame" x="0.0" y="145.5" width="343" height="135"/>
                                                 <state key="normal" title="Login"/>
                                                 <connections>
-                                                    <segue destination="TE6-YS-Fuq" kind="show" identifier="LoginSegue" id="lbx-GR-6RM"/>
+                                                    <segue destination="IOM-Ca-I97" kind="show" identifier="LoginSegue" id="lbx-GR-6RM"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -129,19 +129,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="hsg-PH-ik0">
-                                <rect key="frame" x="16" y="80" width="343" height="571"/>
+                                <rect key="frame" x="16" y="80" width="343" height="522"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jdz-q7-l3m">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="113.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="101.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Activity Log" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNn-34-fGL">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="52"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="45.5"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Days Logged: 0 days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqL-Cv-NlN">
-                                                <rect key="frame" x="0.0" y="62" width="343" height="51.5"/>
+                                                <rect key="frame" x="0.0" y="55.5" width="343" height="46"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -149,22 +149,22 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;INSERT CALENDAR HERE&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tWO-Ka-DKc">
-                                        <rect key="frame" x="0.0" y="152.5" width="343" height="113.5"/>
+                                        <rect key="frame" x="0.0" y="140.5" width="343" height="101"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sMn-WO-zun">
-                                        <rect key="frame" x="0.0" y="305" width="343" height="113.5"/>
+                                        <rect key="frame" x="0.0" y="280.5" width="343" height="101.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step Count: 0 steps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33H-CP-10t">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="52"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="45.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Hours Logged: 0 hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkA-C2-Nn4">
-                                                <rect key="frame" x="0.0" y="62" width="343" height="51.5"/>
+                                                <rect key="frame" x="0.0" y="55.5" width="343" height="46"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -172,10 +172,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="S4U-SC-NDL">
-                                        <rect key="frame" x="0.0" y="457.5" width="343" height="113.5"/>
+                                        <rect key="frame" x="0.0" y="421" width="343" height="101"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILG-Nc-UN2">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="113.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="101"/>
                                                 <state key="normal" title="View Activity History"/>
                                                 <connections>
                                                     <action selector="seeActivityHistoryButtonPressed:" destination="TE6-YS-Fuq" eventType="touchUpInside" id="7VX-t8-m7C"/>
@@ -196,6 +196,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h0n-sn-mJa"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Activities" id="LWk-p5-TbU"/>
                     <navigationItem key="navigationItem" title="Activity Log" id="t27-Sb-rWq"/>
                     <connections>
                         <outlet property="activityLogLabel" destination="zNn-34-fGL" id="xun-iz-bcA"/>
@@ -207,7 +208,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R3l-t6-3xR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3959.1999999999998" y="109.29535232383809"/>
+            <point key="canvasLocation" x="4898.3999999999996" y="109.29535232383809"/>
         </scene>
         <!--Add a New Activity-->
         <scene sceneID="eFJ-85-ZPO">
@@ -340,7 +341,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kEr-nI-OCA" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="gJI-Nu-TE0" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="5932" y="638.2308845577212"/>
+            <point key="canvasLocation" x="6871.1999999999998" y="638.2308845577212"/>
         </scene>
         <!--Activity History-->
         <scene sceneID="hio-dd-WLv">
@@ -429,7 +430,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E75-wu-hZ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5028" y="639.13043478260875"/>
+            <point key="canvasLocation" x="5967.1999999999998" y="639.13043478260875"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="q5l-wC-tKb">
@@ -448,6 +449,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y4P-sC-mW1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1109.5999999999999" y="142.57871064467767"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="4YE-q0-9e6">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="IOM-Ca-I97" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Dtb-HC-oxx">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="TE6-YS-Fuq" kind="relationship" relationship="viewControllers" id="XrW-ET-8pT"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mmt-05-lPy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3959.1999999999998" y="109.29535232383809"/>
         </scene>
     </scenes>
 </document>
