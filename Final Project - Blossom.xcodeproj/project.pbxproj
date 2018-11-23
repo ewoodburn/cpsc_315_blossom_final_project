@@ -24,6 +24,7 @@
 		CAFE56DF21A8801E00BD8BF9 /* Mood+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE56DD21A8801E00BD8BF9 /* Mood+CoreDataProperties.swift */; };
 		CAFE56E121A8807200BD8BF9 /* MoodHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE56E021A8807200BD8BF9 /* MoodHomeViewController.swift */; };
 		CAFE56E321A887CB00BD8BF9 /* MoodHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE56E221A887CB00BD8BF9 /* MoodHistoryTableViewController.swift */; };
+		CAFE56E521A88F7500BD8BF9 /* Moods.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE56E421A88F7500BD8BF9 /* Moods.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		CAFE56DD21A8801E00BD8BF9 /* Mood+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mood+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CAFE56E021A8807200BD8BF9 /* MoodHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodHomeViewController.swift; sourceTree = "<group>"; };
 		CAFE56E221A887CB00BD8BF9 /* MoodHistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodHistoryTableViewController.swift; sourceTree = "<group>"; };
+		CAFE56E421A88F7500BD8BF9 /* Moods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moods.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				4B56746421A0E9FD007C1B70 /* ActivityLogViewController.swift */,
 				CAFE56E021A8807200BD8BF9 /* MoodHomeViewController.swift */,
 				CAFE56E221A887CB00BD8BF9 /* MoodHistoryTableViewController.swift */,
+				CAFE56E421A88F7500BD8BF9 /* Moods.swift */,
 				4B56745721A0E3CB007C1B70 /* Assets.xcassets */,
 				4B56745921A0E3CB007C1B70 /* LaunchScreen.storyboard */,
 				4B56745C21A0E3CB007C1B70 /* Info.plist */,
@@ -189,6 +192,7 @@
 			files = (
 				4B56747421A6404A007C1B70 /* Activity+CoreDataClass.swift in Sources */,
 				4B56746F21A12D07007C1B70 /* ActivityHistoryTableViewController.swift in Sources */,
+				CAFE56E521A88F7500BD8BF9 /* Moods.swift in Sources */,
 				4B56746521A0E9FD007C1B70 /* ActivityLogViewController.swift in Sources */,
 				4B56747121A12DC6007C1B70 /* ActivityHistoryTableViewCell.swift in Sources */,
 				CAFE56DF21A8801E00BD8BF9 /* Mood+CoreDataProperties.swift in Sources */,
