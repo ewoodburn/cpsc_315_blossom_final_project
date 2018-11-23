@@ -17,6 +17,9 @@ class MoodHomeViewController: UIViewController {
     }
     
 
+    @IBAction func moodHistoryButtonPressed(_ sender: UIButton) {
+        print("mood history button pressed")
+    }
     /*
     // MARK: - Navigation
 

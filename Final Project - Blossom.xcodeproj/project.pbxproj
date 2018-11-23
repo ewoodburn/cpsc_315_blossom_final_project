@@ -23,6 +23,7 @@
 		CAFE56DE21A8801E00BD8BF9 /* Mood+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE56DC21A8801E00BD8BF9 /* Mood+CoreDataClass.swift */; };
 		CAFE56DF21A8801E00BD8BF9 /* Mood+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE56DD21A8801E00BD8BF9 /* Mood+CoreDataProperties.swift */; };
 		CAFE56E121A8807200BD8BF9 /* MoodHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE56E021A8807200BD8BF9 /* MoodHomeViewController.swift */; };
+		CAFE56E321A887CB00BD8BF9 /* MoodHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE56E221A887CB00BD8BF9 /* MoodHistoryTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		CAFE56DC21A8801E00BD8BF9 /* Mood+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mood+CoreDataClass.swift"; sourceTree = "<group>"; };
 		CAFE56DD21A8801E00BD8BF9 /* Mood+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mood+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CAFE56E021A8807200BD8BF9 /* MoodHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodHomeViewController.swift; sourceTree = "<group>"; };
+		CAFE56E221A887CB00BD8BF9 /* MoodHistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodHistoryTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				4B56746621A0F1CE007C1B70 /* LogNewActivityViewController.swift */,
 				4B56746421A0E9FD007C1B70 /* ActivityLogViewController.swift */,
 				CAFE56E021A8807200BD8BF9 /* MoodHomeViewController.swift */,
+				CAFE56E221A887CB00BD8BF9 /* MoodHistoryTableViewController.swift */,
 				4B56745721A0E3CB007C1B70 /* Assets.xcassets */,
 				4B56745921A0E3CB007C1B70 /* LaunchScreen.storyboard */,
 				4B56745C21A0E3CB007C1B70 /* Info.plist */,
@@ -195,6 +198,7 @@
 				4B56744E21A0E3CA007C1B70 /* AppDelegate.swift in Sources */,
 				4B56745621A0E3CA007C1B70 /* Final_Project___Blossom.xcdatamodeld in Sources */,
 				CAFE56E121A8807200BD8BF9 /* MoodHomeViewController.swift in Sources */,
+				CAFE56E321A887CB00BD8BF9 /* MoodHistoryTableViewController.swift in Sources */,
 				4B56747521A6404A007C1B70 /* Activity+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
