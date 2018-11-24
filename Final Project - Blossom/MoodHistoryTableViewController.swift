@@ -25,6 +25,8 @@ class MoodHistoryTableViewController: UIViewController, UITableViewDataSource, U
     
     @IBAction func editBarButtonPressed(_ sender: UIBarButtonItem) {
         print("edit bar button pressed")
+        let editing = !tableView.isEditing
+        tableView.setEditing(editing, animated: true)
     }
     // MARK: - Table view data source
     
@@ -49,6 +51,22 @@ class MoodHistoryTableViewController: UIViewController, UITableViewDataSource, U
         return cell
     }
     
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        //switches the place of the cell based on the user
+        let mood = moods.remove(at: sourceIndexPath.row)
+        moods.insert(mood, at: destinationIndexPath.row)
+        //refreshes the tableView
+        tableView.reloadData()
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            context.delete(moods[indexPath.row])
+            moods.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            saveMoods()
+        }
+    }
     @IBAction func unwindSegueToMoodHistoryTableVC(_ segue: UIStoryboardSegue) {
         print("unwindToMoodHistoryTableVC segue performed")
         if segue.identifier == "SaveMoodUnwindSegue" {

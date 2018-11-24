@@ -317,15 +317,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MoodHistoryCell" id="qYB-Ne-Zzl" customClass="MoodHistoryTableViewCell" customModule="Final_Project___Blossom" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MoodHistoryCell" rowHeight="50" id="qYB-Ne-Zzl" customClass="MoodHistoryTableViewCell" customModule="Final_Project___Blossom" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qYB-Ne-Zzl" id="Zez-S2-dL9">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="uOC-dh-6Gc">
-                                                    <rect key="frame" x="31" y="11.5" width="313" height="20.5"/>
+                                                    <rect key="frame" x="31" y="14.5" width="313" height="20.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Mood" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeP-2B-jx2">
                                                             <rect key="frame" x="0.0" y="0.0" width="166.5" height="20.5"/>
@@ -370,7 +370,11 @@
                                     <segue destination="dcu-h7-be5" kind="show" id="0qG-oj-Sqp"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem systemItem="edit" id="aqw-GF-cgf"/>
+                            <barButtonItem systemItem="edit" id="aqw-GF-cgf">
+                                <connections>
+                                    <action selector="editBarButtonPressed:" destination="02C-eu-lbm" id="YeQ-Eo-2iF"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
