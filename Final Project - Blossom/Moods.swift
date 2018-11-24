@@ -9,11 +9,11 @@
 import Foundation
 
 enum Moods: String {
-    case very_good = "Very good"
-    case good = "Good"
-    case moderate = "Moderate"
-    case bad = "Bad"
-    case very_bad = "Very bad"
+    case very_good = "😀 Very good"
+    case good = "🙂 Good"
+    case moderate = "😐 Moderate"
+    case bad = "🙁 Bad"
+    case very_bad = "😔 Very bad"
     
    /* func moodEmoji() -> String {
         Moods.very_good = "😀"

@@ -79,27 +79,52 @@ class LogMoodViewController: UIViewController, UITextViewDelegate {
         }
     }
     
+     // MARK: - UITextViewDelegate functions
+    //implements the UITextViewDelegate functionality
     func textViewDidBeginEditing(_ textView: UITextView) {
         textView.text = ""
         textView.textColor = .black
         print("text view did being editing")
     }
     
+    //not currently working
     func textViewDidEndEditing(_ textView: UITextView) {
-        if textView.hasText {
-            personalNotesString = textView.text
-            print(personalNotesString)
-        }
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "SaveMoodUnwindSegue" {
+            print("preparing SaveMoodUnwindSegue")
+            if let mood = currentMood {
+                var userMood = Mood(context: context)
+                userMood.moodString = mood.rawValue
+                //userMood.moodEmoji = 
+                if personalNotesTextView.hasText {
+                    userMood.personalNotes = personalNotesTextView.text
+                } else {
+                    userMood.personalNotes = nil
+                }
+                
+                dateFormatter.dateStyle = DateFormatter.Style.short
+                dateFormatter.timeStyle = DateFormatter.Style.short
+                
+                let date = datePicker.date
+                userMood.dateLogged = date as NSDate
+                self.newMood = userMood
+            }
+        }
     }
-    */
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "SaveMoodUnwindSegue" {
+            guard let _ = currentMood else {
+                print("need to log a mood")
+                return false
+            }
+            return true
+        }
+        return true
+    }
 
 }
