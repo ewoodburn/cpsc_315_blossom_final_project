@@ -5,15 +5,9 @@
 //  Created by Ariana Hibbard on 11/23/18.
 //  Copyright © 2018 Emma Woodburn. All rights reserved.
 //
-/*
- 
- import UIKit
- import CoreData
- class MoodHistoryTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
- 
- }
- */
+
 import UIKit
+import CoreData
 
 class MoodHistoryTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -26,6 +20,7 @@ class MoodHistoryTableViewController: UIViewController, UITableViewDataSource, U
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        loadMoods()
     }
     
     @IBAction func editBarButtonPressed(_ sender: UIBarButtonItem) {
@@ -62,12 +57,36 @@ class MoodHistoryTableViewController: UIViewController, UITableViewDataSource, U
                 if let mood = addMoodVC.newMood {
                     moods.append(mood)
                     print(moods)
-                    //saveMoods()
+                    saveMoods()
                     tableView.reloadData()
                 }
             }
         }
     }
+    
+    func loadMoods() {
+        let request: NSFetchRequest<Mood> = Mood.fetchRequest()
+        
+        do{
+            moods = try context.fetch(request)
+        }
+        catch{
+            print("Error fetching activities")
+        }
+        tableView.reloadData()
+    }
+    
+    func saveMoods() {
+        do{
+            try context.save()
+        }
+        catch{
+            print("error saving activites")
+        }
+        
+        self.tableView.reloadData()
+    }
+
     /*
     // MARK: - Navigation
 
