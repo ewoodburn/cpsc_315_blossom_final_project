@@ -9,6 +9,8 @@
 import UIKit
 
 class ActivityLogViewController: UIViewController {
+    
+    let healthKit = HealthKitData()
     //setting up the connections to the UI
     @IBOutlet var activityLogLabel: UILabel!
     @IBOutlet var daysLoggedLabel: UILabel!
@@ -18,12 +20,19 @@ class ActivityLogViewController: UIViewController {
     @IBOutlet var stepCountLabel: UILabel!
     @IBOutlet var hoursLoggedLabel: UILabel!
     
+    var steps: Double = 0
     //var storedActivity: Activity? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        healthKit.activateHealthKit()
+        healthKit.retrieveStepCount {
+            (steps) in
+            self.steps = steps
+            self.updateUI()
+        }
     }
     
     @IBAction func logActivityButtonPressed(_ sender: UIButton){
@@ -44,6 +53,10 @@ class ActivityLogViewController: UIViewController {
             }
             
         }
+    }
+    
+    func updateUI() {
+        stepCountLabel.text = "\(steps)"
     }
     
 

@@ -14,8 +14,4 @@ enum Moods: String {
     case moderate = "😐 Moderate"
     case bad = "🙁 Bad"
     case very_bad = "😔 Very bad"
-    
-   /* func moodEmoji() -> String {
-        Moods.very_good = "😀"
-    }*/
 }
