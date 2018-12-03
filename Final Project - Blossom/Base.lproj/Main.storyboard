@@ -210,6 +210,23 @@
             </objects>
             <point key="canvasLocation" x="4898.3999999999996" y="109.29535232383809"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="vp3-HW-I1V">
+            <objects>
+                <viewController id="cUu-V5-bWv" customClass="ResourcesViewController" customModule="Final_Project___Blossom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N1H-am-fnf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="rd7-eI-Fi4"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Jf9-Vz-uKR"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nto-eS-dnc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4898" y="1617"/>
+        </scene>
         <!--Mood Tracker-->
         <scene sceneID="k3m-Y9-zuK">
             <objects>
@@ -888,6 +905,7 @@
                     <connections>
                         <segue destination="TE6-YS-Fuq" kind="relationship" relationship="viewControllers" id="XrW-ET-8pT"/>
                         <segue destination="al6-Lt-6BA" kind="relationship" relationship="viewControllers" id="Hg5-Rr-z5y"/>
+                        <segue destination="cUu-V5-bWv" kind="relationship" relationship="viewControllers" id="fjk-rT-qrh"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mmt-05-lPy" userLabel="First Responder" sceneMemberID="firstResponder"/>
