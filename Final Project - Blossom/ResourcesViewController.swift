@@ -7,13 +7,28 @@
 //
 
 import UIKit
+import SafariServices
 
-class ResourcesViewController: UIViewController {
+class ResourcesViewController: UIViewController, SFSafariViewControllerDelegate {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        let urlString = "https://www.nami.org/Find-Support/NAMI-HelpLine/Top-25-HelpLine-Resources"
+        
+        if let url = URL(string: urlString) {
+            let vc = SFSafariViewController(url: url, entersReaderIfAvailable: true)
+            vc.delegate = self
+            
+            present(vc, animated: true)
+        }
+    }
+    
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        dismiss(animated: true)
     }
     
 
