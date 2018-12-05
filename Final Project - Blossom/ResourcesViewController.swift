@@ -11,13 +11,17 @@ import SafariServices
 
 class ResourcesViewController: UIViewController, SFSafariViewControllerDelegate {
     
+    //@IBOutlet var resourcesLinkLabel: UILabel!
+    //@IBOutlet var resourchesLinkTextView: UITextView!
+    
+    let urlString = "https://www.nami.org/Find-Support/NAMI-HelpLine/Top-25-HelpLine-Resources"
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        let urlString = "https://www.nami.org/Find-Support/NAMI-HelpLine/Top-25-HelpLine-Resources"
         
         if let url = URL(string: urlString) {
             let vc = SFSafariViewController(url: url, entersReaderIfAvailable: true)
@@ -29,6 +33,17 @@ class ResourcesViewController: UIViewController, SFSafariViewControllerDelegate 
     
     func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
         dismiss(animated: true)
+        //displayInformation()
+    }
+    
+    @IBAction func displayInformation(_ sender: UIButton){
+        if let url = URL(string: urlString) {
+            let vc = SFSafariViewController(url: url, entersReaderIfAvailable: true)
+            vc.delegate = self
+            
+            present(vc, animated: true)
+        }
+
     }
     
 
