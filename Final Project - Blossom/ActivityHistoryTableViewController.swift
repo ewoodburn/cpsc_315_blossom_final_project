@@ -86,6 +86,15 @@ class ActivityHistoryTableViewController: UIViewController, UITableViewDataSourc
             if identifier == "LogNewActivitySegue"{
                 print("segue to log new acitivty view controller")
             }
+            if identifier == "ActivityDetailSegue"{
+                var cellIndex = tableView.indexPathForSelectedRow
+                if let index = cellIndex{
+                    let activity = activities[index.row]
+                    if let activityDetailVC = segue.destination as? ActivityDetailViewController{
+                        activityDetailVC.activity = activity
+                    }
+                }
+            }
         }
     }
     

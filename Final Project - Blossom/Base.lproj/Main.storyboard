@@ -234,6 +234,46 @@
             </objects>
             <point key="canvasLocation" x="4898.3999999999996" y="109.29535232383809"/>
         </scene>
+        <!--Resources-->
+        <scene sceneID="vp3-HW-I1V">
+            <objects>
+                <viewController id="cUu-V5-bWv" customClass="ResourcesViewController" customModule="Final_Project___Blossom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N1H-am-fnf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vfh-P5-WT9">
+                                <rect key="frame" x="166" y="303" width="82" height="61"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UwG-NU-6qo">
+                                        <rect key="frame" x="-77" y="8" width="237" height="48"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <state key="normal" title="Display Resources">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="displayInformation:" destination="cUu-V5-bWv" eventType="touchUpInside" id="qgR-Nr-T8y"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vfh-P5-WT9" firstAttribute="top" secondItem="rd7-eI-Fi4" secondAttribute="top" constant="200" id="AI6-tK-VTK"/>
+                            <constraint firstItem="vfh-P5-WT9" firstAttribute="leading" secondItem="rd7-eI-Fi4" secondAttribute="leading" constant="30" id="DeC-mi-Hd3"/>
+                            <constraint firstItem="rd7-eI-Fi4" firstAttribute="trailing" secondItem="vfh-P5-WT9" secondAttribute="trailing" constant="30" id="Lsw-pG-USD"/>
+                            <constraint firstItem="rd7-eI-Fi4" firstAttribute="bottom" secondItem="vfh-P5-WT9" secondAttribute="bottom" constant="200" id="bOp-BH-v7g"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rd7-eI-Fi4"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Resources" id="Jf9-Vz-uKR"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nto-eS-dnc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4898" y="1617"/>
+        </scene>
         <!--Mood Tracker-->
         <scene sceneID="k3m-Y9-zuK">
             <objects>
@@ -605,7 +645,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UqY-w0-k8o" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="cAR-Fx-PcJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="6893.6000000000004" y="861.3193403298352"/>
+            <point key="canvasLocation" x="6894" y="965"/>
         </scene>
         <!--Add a New Activity-->
         <scene sceneID="eFJ-85-ZPO">
@@ -625,13 +665,13 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="36.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity Type:   " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4DM-ts-Vu7">
-                                                        <rect key="frame" x="0.0" y="0.0" width="116.5" height="36.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="117" height="36.5"/>
+                                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w7h-aP-q07">
-                                                        <rect key="frame" x="126.5" y="0.0" width="216.5" height="36.5"/>
+                                                        <rect key="frame" x="127" y="0.0" width="216" height="36.5"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -643,7 +683,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Spent:      " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxi-0e-50s">
                                                         <rect key="frame" x="0.0" y="0.0" width="118.5" height="36.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -660,7 +700,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Logged:    " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EC1-1t-BhG">
                                                         <rect key="frame" x="0.0" y="0.0" width="120.5" height="36.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -677,7 +717,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal Notes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="019-C2-Gil">
                                                         <rect key="frame" x="0.0" y="0.0" width="120.5" height="36.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -738,7 +778,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kEr-nI-OCA" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="gJI-Nu-TE0" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="6895" y="109"/>
+            <point key="canvasLocation" x="6894" y="294"/>
+        </scene>
+        <!--Activity Detail View Controller-->
+        <scene sceneID="cw0-U8-bdg">
+            <objects>
+                <viewController id="scu-1f-2bW" customClass="ActivityDetailViewController" customModule="Final_Project___Blossom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iW9-KW-omc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="81G-lH-dr2">
+                                <rect key="frame" x="16" y="80" width="343" height="571"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity Here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15T-aU-ttK">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="218"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On DATE for X AMOUNT OF TIME" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pwf-q3-uj9">
+                                        <rect key="frame" x="0.0" y="223" width="343" height="142"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal Notes" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18i-1p-tKH">
+                                        <rect key="frame" x="0.0" y="370" width="343" height="201"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="81G-lH-dr2" firstAttribute="leading" secondItem="lfq-7J-u9C" secondAttribute="leading" constant="16" id="feO-Wg-Bz6"/>
+                            <constraint firstItem="81G-lH-dr2" firstAttribute="top" secondItem="lfq-7J-u9C" secondAttribute="top" constant="16" id="hsx-3W-Wwq"/>
+                            <constraint firstAttribute="trailing" secondItem="81G-lH-dr2" secondAttribute="trailing" constant="16" id="npS-CU-xVu"/>
+                            <constraint firstItem="lfq-7J-u9C" firstAttribute="bottom" secondItem="81G-lH-dr2" secondAttribute="bottom" constant="16" id="xp9-NJ-2oW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lfq-7J-u9C"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityTypeLabel" destination="15T-aU-ttK" id="Gpq-Jh-QMp"/>
+                        <outlet property="dateAndTimeLabel" destination="Pwf-q3-uj9" id="4aS-6f-kPT"/>
+                        <outlet property="personalNotesLabel" destination="18i-1p-tKH" id="otg-bm-2xl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N62-pL-JUZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6893.6000000000004" y="-381.85907046476763"/>
         </scene>
         <!--Activity History-->
         <scene sceneID="hio-dd-WLv">
@@ -789,6 +880,7 @@
                                             <outlet property="dateLabel" destination="lG9-RM-4vz" id="oX8-G7-jTa"/>
                                             <outlet property="timeLabel" destination="gtE-rE-tmF" id="mhx-Ff-5ud"/>
                                             <outlet property="typeLabel" destination="oeu-es-sy0" id="ruy-hG-gd3"/>
+                                            <segue destination="scu-1f-2bW" kind="show" identifier="ActivityDetailSegue" id="7Eq-b9-rHt"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -860,6 +952,7 @@
                     <connections>
                         <segue destination="TE6-YS-Fuq" kind="relationship" relationship="viewControllers" id="XrW-ET-8pT"/>
                         <segue destination="al6-Lt-6BA" kind="relationship" relationship="viewControllers" id="Hg5-Rr-z5y"/>
+                        <segue destination="cUu-V5-bWv" kind="relationship" relationship="viewControllers" id="fjk-rT-qrh"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mmt-05-lPy" userLabel="First Responder" sceneMemberID="firstResponder"/>
