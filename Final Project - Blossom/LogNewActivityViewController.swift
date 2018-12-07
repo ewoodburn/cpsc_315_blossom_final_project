@@ -16,12 +16,14 @@ class LogNewActivityViewController: UIViewController {
     @IBOutlet var timeSpentLabel: UILabel!
     @IBOutlet var timeSpentTextField: UITextField!
     @IBOutlet var dateLoggedLabel: UILabel!
-    @IBOutlet var dateLoggedTextField: UITextField!
+    
+    @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet var personalNotesLabel: UILabel!
     @IBOutlet var personalNotesTextField: UITextField!
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
+    let dateFormatter = DateFormatter()
     
     //the new activity to be stored
     var newActivity: Activity? = nil
@@ -33,28 +35,31 @@ class LogNewActivityViewController: UIViewController {
     }
     
 
+    @IBAction func dateChanged(_ sender: Any) {
+        print("date picker changed")
+        dateFormatter.dateStyle = DateFormatter.Style.short
+        dateFormatter.timeStyle = DateFormatter.Style.short
+        let strDate = dateFormatter.string(from: datePicker.date)
+        print(strDate)
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         if let identifier = segue.identifier{
             if identifier == "SaveUnwindSegue"{
-                if let activityType = activityTypeTextField.text, let timeSpent = timeSpentTextField.text, let date = dateLoggedTextField.text, let personalNotes = personalNotesTextField.text{
-                    let dateFormatter = DateFormatter()
-
-                    dateFormatter.dateFormat = "MM/dd/yyyy"
-                    if let formattedDate = dateFormatter.date(from: date){
-                        var userActivity = Activity(context: context)
-                        userActivity.date = formattedDate as NSDate
-                        userActivity.activityType = activityType
-                        userActivity.timeSpent = timeSpent
-                        userActivity.personalNotes = personalNotes
-                        //userActivity.
-                        self.newActivity = userActivity
-
-
-                    }
+                if let activityType = activityTypeTextField.text, let timeSpent = timeSpentTextField.text,  let personalNotes = personalNotesTextField.text{
+                    // date formatting
+                    dateFormatter.dateStyle = DateFormatter.Style.short
+                    dateFormatter.timeStyle = DateFormatter.Style.short
                     
-                    
+                    let date = datePicker.date
+                    var userActivity = Activity(context: context)
+                    userActivity.date = date as NSDate
+                    userActivity.activityType = activityType
+                    userActivity.timeSpent = timeSpent
+                    userActivity.personalNotes = personalNotes
+                    //userActivity.
+                    self.newActivity = userActivity
                 }
             }
         }
