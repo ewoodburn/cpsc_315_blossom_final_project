@@ -1,7 +1,8 @@
 //
 //  MoodHomeViewController.swift
 //  Final Project - Blossom
-//
+//  Mood icon provided by the following website:
+//  https://www.flaticon.com/free-icon/smile_1243539#term=moods&page=1&position=3
 //  Created by Ariana Hibbard on 11/23/18.
 //  Copyright © 2018 Emma Woodburn. All rights reserved.
 //

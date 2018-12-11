@@ -196,7 +196,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h0n-sn-mJa"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Activities" id="LWk-p5-TbU"/>
+                    <tabBarItem key="tabBarItem" title="Activities" image="bike (1)" id="LWk-p5-TbU"/>
                     <navigationItem key="navigationItem" title="Activity Log" id="t27-Sb-rWq"/>
                     <connections>
                         <outlet property="activityLogLabel" destination="zNn-34-fGL" id="xun-iz-bcA"/>
@@ -222,7 +222,7 @@
                                 <rect key="frame" x="30" y="264" width="315" height="154"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="UwG-NU-6qo">
-                                        <rect key="frame" x="39" y="0.0" width="237" height="154"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="154"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <state key="normal" title="Click Here to Display Resources">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -243,7 +243,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rd7-eI-Fi4"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Resources" id="Jf9-Vz-uKR"/>
+                    <tabBarItem key="tabBarItem" title="Resources" image="resources" id="Jf9-Vz-uKR"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nto-eS-dnc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -338,7 +338,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kgM-16-Oem"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Mood" id="pqO-h9-8A5"/>
+                    <tabBarItem key="tabBarItem" title="Mood" image="smile" id="pqO-h9-8A5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nOU-Bh-i19" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -927,4 +927,9 @@
             <point key="canvasLocation" x="3959.1999999999998" y="109.29535232383809"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bike (1)" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="resources" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="smile" width="51.200000762939453" height="51.200000762939453"/>
+    </resources>
 </document>

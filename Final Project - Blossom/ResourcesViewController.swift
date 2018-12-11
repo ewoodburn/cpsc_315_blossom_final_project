@@ -1,7 +1,8 @@
 //
 //  ResourcesViewController.swift
 //  Final Project - Blossom
-//
+//  Resources icon provided by the following website:
+//  https://www.flaticon.com/free-icon/human-resources_1322254#term=resources&page=1&position=77
 //  Created by Emma Woodburn on 12/2/18.
 //  Copyright © 2018 Emma Woodburn. All rights reserved.
 //

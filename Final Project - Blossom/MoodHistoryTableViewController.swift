@@ -14,6 +14,10 @@ class MoodHistoryTableViewController: UIViewController, UITableViewDataSource, U
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     var moods:[Mood] = []
+    var moodDates:[NSDate] = []
+    
+    var lastStreakEndDate: NSDate!
+    var streakTotal: Int!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -22,6 +26,8 @@ class MoodHistoryTableViewController: UIViewController, UITableViewDataSource, U
 
         // Do any additional setup after loading the view.
         loadMoods()
+        
+        
         
         if checkIfMoodIsSad() == true{
             var alertController = UIAlertController(title: "We noticed something", message: "You've logged a sad mood for two weeks straight. We recommend heading over to the Resources tab for information on important mental health resources.", preferredStyle: .alert)
@@ -163,7 +169,20 @@ class MoodHistoryTableViewController: UIViewController, UITableViewDataSource, U
     }
 
     func checkIfMoodIsSad() -> Bool{
-        return false
+        return true
     }
+    
+    /*
+    func consecutiveDatesCheck() -> Int {
+        var num = moods.count
+        
+        //loading the array of dates
+        for i in moods {
+            if let currDate = i.dateLogged{
+                moodDates.append(currDate)
+            }
+        }
+    }
+ */
 
 }
