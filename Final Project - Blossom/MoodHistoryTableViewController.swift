@@ -27,26 +27,11 @@ class MoodHistoryTableViewController: UIViewController, UITableViewDataSource, U
         // Do any additional setup after loading the view.
         loadMoods()
         
-        var num = moods.count
-        //loading the array of dates
-        for i in moods {
-            if let currDate = i.dateLogged{
-                if let newDate = currDate as Date!{
-                    moodDates.append(newDate)
-                    
-                    
-                }
-            }
-        }
-        //sorted from most recent date to least recent date
-        var ready = moodDates.sorted(by: { $0.compare($1) == .orderedDescending })
-        print("")
-        print("sorted dates: \(ready)")
-        print("")
+        consecutiveDatesCheck()
 
         
         if checkIfMoodIsSad() == true{
-            var alertController = UIAlertController(title: "We noticed something", message: "You've logged a sad mood for two weeks straight. We recommend heading over to the Resources tab for information on important mental health resources.", preferredStyle: .alert)
+            var alertController = UIAlertController(title: "We noticed something", message: "You've logged a sad mood for two weeks or more. We recommend heading over to the Resources tab for information on important mental health resources.", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
             present(alertController, animated: true, completion: nil)
         }
@@ -185,16 +170,36 @@ class MoodHistoryTableViewController: UIViewController, UITableViewDataSource, U
     }
 
     func checkIfMoodIsSad() -> Bool{
-        return true
+        if moodDates.count >= 14{
+            return true
+        } else{
+            return false
+        }
     }
     
-    /*
-    func consecutiveDatesCheck() -> Int {
-        
 
-        
+    func consecutiveDatesCheck() {
+         var num = moods.count
+         //loading the array of dates when the mood was bad or very bad
+         for i in moods {
+         //print("mood: \(i.moodEmoji)")
+            if i.moodString == "🙁 Bad" || i.moodString == "😔 Very bad"{
+                if let currDate = i.dateLogged{
+                        if let newDate = currDate as Date!{
+                            moodDates.append(newDate)
+                        }
+                }
+            }
+    
+         }
+         //sorted from most recent date to least recent date
+         var ready = moodDates.sorted(by: { $0.compare($1) == .orderedDescending })
+         print("")
+         print("sorted dates: \(ready)")
+         print("")
+    
     }
- */
+
  
 
 }
