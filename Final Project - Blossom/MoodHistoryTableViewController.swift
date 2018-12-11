@@ -22,6 +22,12 @@ class MoodHistoryTableViewController: UIViewController, UITableViewDataSource, U
 
         // Do any additional setup after loading the view.
         loadMoods()
+        
+        if checkIfMoodIsSad() == true{
+            var alertController = UIAlertController(title: "We noticed something", message: "You've logged a sad mood for two weeks straight. We recommend heading over to the Resources tab for information on important mental health resources.", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
+            present(alertController, animated: true, completion: nil)
+        }
     }
     
     /**
@@ -156,14 +162,8 @@ class MoodHistoryTableViewController: UIViewController, UITableViewDataSource, U
         self.tableView.reloadData()
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func checkIfMoodIsSad() -> Bool{
+        return false
     }
-    */
 
 }
