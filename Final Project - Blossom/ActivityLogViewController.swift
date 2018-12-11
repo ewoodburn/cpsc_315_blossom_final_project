@@ -67,9 +67,9 @@ class ActivityLogViewController: UIViewController {
     
     func updateUI() {
         print("steps: \(steps)")
-        stepCountLabel.text = "Step Count: \(steps) steps"
+        stepCountLabel.text = "🏃‍♀️ Step Count: \(steps) steps"
         print("days: \(activites.count)")
-        daysLoggedLabel.text = "Days Logged: \(activites.count) days"
+        daysLoggedLabel.text = "🗓 Days Logged: \(activites.count) days"
     }
     
     func loadActivities() {
