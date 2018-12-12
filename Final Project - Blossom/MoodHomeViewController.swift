@@ -88,7 +88,14 @@ class MoodHomeViewController: UIViewController {
             let month = cal.component(.month, from: date)
             let year = cal.component(.year, from: date)
             
-            var dateString = "\(year)-\(month)-\(day)"
+            var dateString:String
+            
+            if day < 10 {
+                dateString = "\(year)-\(month)-0\(day)"
+            } else {
+                dateString = "\(year)-\(month)-\(day)"
+            }
+            
             dateStringArray.append(dateString)
             print("datestring: \(dateString)")
 
