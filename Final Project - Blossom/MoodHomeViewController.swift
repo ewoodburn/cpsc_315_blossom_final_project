@@ -25,6 +25,7 @@ class MoodHomeViewController: UIViewController {
     @IBOutlet var labels: [UILabel]!
     
     @IBOutlet var emojiLabels: [UILabel]!
+    
 
 
     override func viewDidLoad() {
@@ -104,6 +105,14 @@ class MoodHomeViewController: UIViewController {
                     if dateString == moodDateString{
                         print("they are the same")
                         print("dateString: \(dateString)")
+                        if let currMoodWhenMatching = mood.moodEmoji{
+                            weekMoods[currWeekday-1].append(currMoodWhenMatching)
+                        } else{
+                            if let currMoodWhenMatching = mood.moodEmoji{
+                                weekMoods[currWeekday-1].append("-")
+                                
+                            }
+                        }
                     }
                 }
                 
@@ -112,9 +121,12 @@ class MoodHomeViewController: UIViewController {
         
         var daysArray = ["Sun", "Mon", "Tues", "Wed", "Thu", "Fri", "Sat"]
         
+        
+        
         //let weekDayNum: Int = cal.component(.weekday, from: date)
         for i in 0..<weekdays.count {
             labels[i].text = daysArray[weekdays[i]-1]
+            emojiLabels[i].text = weekMoods[i]
         }
         var currDay = ""
         /*switch weekDayNum {
