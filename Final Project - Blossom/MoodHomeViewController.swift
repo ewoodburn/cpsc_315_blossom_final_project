@@ -64,7 +64,7 @@ class MoodHomeViewController: UIViewController {
         
         for i in 0..<weekdays.count {
             labels[i].text = daysArray[weekdays[i]-1]
-            emojiLabels[i].text = weekMoods[i]
+            //emojiLabels[i].text = weekMoods[i]
         }
     }
     
@@ -90,6 +90,11 @@ class MoodHomeViewController: UIViewController {
             print("calling checkMoodArray")
             if let newEmoji = checkMoodArray(dateString: dateString) {
                 // update the right labels
+                emojiLabels[i-1].text = newEmoji
+                print("i-1: \(i-1)")
+                print("NEW EMOJI: \(newEmoji)")
+            } else {
+                emojiLabels[i-1].text = "❓"
             }
             date = cal.date(byAdding: .day, value: -1, to: date)!
         }
