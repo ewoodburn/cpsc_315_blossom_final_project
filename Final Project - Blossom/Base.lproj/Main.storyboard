@@ -378,20 +378,20 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Mood" image="smile" id="pqO-h9-8A5"/>
                     <connections>
-                        <outletCollection property="labels" destination="MoV-pm-gaf" collectionClass="NSMutableArray" id="Nfj-Gz-C1M"/>
-                        <outletCollection property="labels" destination="DDV-92-yHY" collectionClass="NSMutableArray" id="5RJ-eH-UxN"/>
-                        <outletCollection property="labels" destination="NbB-Ou-QHB" collectionClass="NSMutableArray" id="64w-6V-ccq"/>
-                        <outletCollection property="labels" destination="bjd-vq-NPQ" collectionClass="NSMutableArray" id="i0O-Dd-FzR"/>
-                        <outletCollection property="labels" destination="TCI-Qn-dFP" collectionClass="NSMutableArray" id="2Ky-N8-55W"/>
-                        <outletCollection property="labels" destination="Jql-FG-wLX" collectionClass="NSMutableArray" id="Sb6-g8-BK9"/>
-                        <outletCollection property="labels" destination="kzT-o5-tfV" collectionClass="NSMutableArray" id="oJr-jw-XIs"/>
-                        <outletCollection property="emojiLabels" destination="FtS-ve-k03" collectionClass="NSMutableArray" id="jBQ-qO-HWd"/>
-                        <outletCollection property="emojiLabels" destination="Am7-k7-zRL" collectionClass="NSMutableArray" id="F0d-gr-m2Y"/>
-                        <outletCollection property="emojiLabels" destination="zi3-yk-d3g" collectionClass="NSMutableArray" id="njD-nI-mjt"/>
-                        <outletCollection property="emojiLabels" destination="RBn-nI-494" collectionClass="NSMutableArray" id="ynD-ZG-l3s"/>
-                        <outletCollection property="emojiLabels" destination="TSj-cH-Gfu" collectionClass="NSMutableArray" id="OQQ-FQ-xwX"/>
-                        <outletCollection property="emojiLabels" destination="H0r-xQ-sDt" collectionClass="NSMutableArray" id="JrV-dt-jIk"/>
-                        <outletCollection property="emojiLabels" destination="SO2-cA-SZW" collectionClass="NSMutableArray" id="2gT-Wh-aEY"/>
+                        <outletCollection property="labels" destination="kzT-o5-tfV" collectionClass="NSMutableArray" id="PbL-SG-tAY"/>
+                        <outletCollection property="labels" destination="Jql-FG-wLX" collectionClass="NSMutableArray" id="p0l-GF-8FU"/>
+                        <outletCollection property="labels" destination="TCI-Qn-dFP" collectionClass="NSMutableArray" id="b1g-Wi-KHh"/>
+                        <outletCollection property="labels" destination="bjd-vq-NPQ" collectionClass="NSMutableArray" id="dNc-ZU-wTl"/>
+                        <outletCollection property="labels" destination="NbB-Ou-QHB" collectionClass="NSMutableArray" id="w9T-BL-l6E"/>
+                        <outletCollection property="labels" destination="DDV-92-yHY" collectionClass="NSMutableArray" id="Juq-eb-zl9"/>
+                        <outletCollection property="labels" destination="MoV-pm-gaf" collectionClass="NSMutableArray" id="HH6-hj-oSn"/>
+                        <outletCollection property="emojiLabels" destination="SO2-cA-SZW" collectionClass="NSMutableArray" id="60D-qo-OUO"/>
+                        <outletCollection property="emojiLabels" destination="H0r-xQ-sDt" collectionClass="NSMutableArray" id="cGK-CC-RMT"/>
+                        <outletCollection property="emojiLabels" destination="TSj-cH-Gfu" collectionClass="NSMutableArray" id="jpv-j2-Q7M"/>
+                        <outletCollection property="emojiLabels" destination="RBn-nI-494" collectionClass="NSMutableArray" id="atM-ni-Kwh"/>
+                        <outletCollection property="emojiLabels" destination="zi3-yk-d3g" collectionClass="NSMutableArray" id="Pku-fA-b5T"/>
+                        <outletCollection property="emojiLabels" destination="Am7-k7-zRL" collectionClass="NSMutableArray" id="zFb-eG-OCd"/>
+                        <outletCollection property="emojiLabels" destination="FtS-ve-k03" collectionClass="NSMutableArray" id="qH0-cN-EbA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nOU-Bh-i19" userLabel="First Responder" sceneMemberID="firstResponder"/>

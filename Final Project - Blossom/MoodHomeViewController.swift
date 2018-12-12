@@ -59,12 +59,11 @@ class MoodHomeViewController: UIViewController {
         for i in 1...7 {
             let weekDayNum: Int = cal.component(.weekday, from: date)
             weekdays.append(weekDayNum)
-            date = cal.date(byAdding: .day, value: 1, to: date)!
+            date = cal.date(byAdding: .day, value: -1, to: date)!
         }
         
         for i in 0..<weekdays.count {
             labels[i].text = daysArray[weekdays[i]-1]
-            //emojiLabels[i].text = weekMoods[i]
         }
     }
     
@@ -96,7 +95,7 @@ class MoodHomeViewController: UIViewController {
             } else {
                 emojiLabels[i-1].text = "❓"
             }
-            date = cal.date(byAdding: .day, value: 1, to: date)!
+            date = cal.date(byAdding: .day, value: -1, to: date)!
         }
     }
     
