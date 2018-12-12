@@ -15,6 +15,19 @@ class MoodHistoryTableViewController: UIViewController, UITableViewDataSource, U
     
     var moods:[Mood] = []
     
+
+    /*
+    @IBOutlet var dayLabel1: UILabel!
+    @IBOutlet var dayLabel2: UILabel!
+    @IBOutlet var dayLabel3: UILabel!
+    @IBOutlet var dayLabel4: UILabel!
+    @IBOutlet var dayLabel5: UILabel!
+    @IBOutlet var dayLabel6: UILabel!
+    @IBOutlet var dayLabel7: UILabel!
+ */
+
+    
+    
     
     @IBOutlet weak var tableView: UITableView!
     

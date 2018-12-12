@@ -19,6 +19,9 @@ class MoodHomeViewController: UIViewController {
     
     var lastStreakEndDate: NSDate!
     var streakTotal: Int!
+    
+    @IBOutlet var labels: [UILabel]!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +38,54 @@ class MoodHomeViewController: UIViewController {
             alertController.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
             present(alertController, animated: true, completion: nil)
         }
+        
+        
+        let cal = Calendar.current
+        var date = cal.startOfDay(for: Date())
+        var days = [Int]()
+        var weekdays = [Int]()
+        for i in 1...7 {
+            let day = cal.component(.day, from: date)
+            let month = cal.component(.month, from: date)
+            let year = cal.component(.year, from: date)
+            let weekDayNum: Int = cal.component(.weekday, from: date)
+            weekdays.append(weekDayNum)
+            print("DATE: ")
+            print("\(month)/\(day)/\(year)")
+            days.append(day)
+            date = cal.date(byAdding: .day, value: -1, to: date)!
+        }
+        print("")
+        print("DAYS: \(days)")
+        print("current weekday: \(cal.component(.weekday, from: date))")
+        print("")
+        
+        var daysArray = ["Sun", "Mon", "Tues", "Wed", "Thu", "Fri", "Sat"]
+        
+        //let weekDayNum: Int = cal.component(.weekday, from: date)
+        for i in 0..<weekdays.count {
+            labels[i].text = daysArray[weekdays[i]-1]
+        }
+        var currDay = ""
+        /*switch weekDayNum {
+        case 1:
+            currDay = daysArray[0]
+            labels[0].text = currDay
+        case 2:
+            currDay = daysArray[1]
+        case 3:
+            currDay = daysArray[2]
+        case 4:
+            currDay = daysArray[3]
+        case 5:
+            currDay = daysArray[4]
+        case 6:
+            currDay = daysArray[5]
+        default:
+            currDay = daysArray[6]
+        }*/
+        
+        print("CURR DAY: \(currDay)")
     }
     
 
