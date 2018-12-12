@@ -50,6 +50,12 @@ class MoodHomeViewController: UIViewController {
    
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        loadMoods()
+        updateEmojisView()
+        updateWeekLabels()
+    }
+    
     func updateWeekLabels() {
         print("UPDATING THE WEEK LABELS")
         let cal = Calendar.current
