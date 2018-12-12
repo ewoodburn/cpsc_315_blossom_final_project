@@ -13,6 +13,7 @@ class HealthKitData {
     let healthStore = HKHealthStore()
     
    var steps: Double = 0
+    var minutes: Double = 0
     // define the Mindful Session HealthKit Category
     let mindfulType = HKObjectType.categoryType(forIdentifier: .mindfulSession)
     
@@ -33,7 +34,7 @@ class HealthKitData {
             if !success {
                 print("Health Kit Auth error \(error)")
             }
-            self.retrieveMindfulnessMinutes()
+            //self.retrieveMindfulnessMinutes()
             //self.retrieveStepCount()
         }
     }
@@ -83,7 +84,7 @@ class HealthKitData {
         healthStore.execute(query)
     }
     // Display a users mindful minutes for the last 24 hours
-    func retrieveMindfulnessMinutes() {
+    func retrieveMindfulnessMinutes(completion: @escaping (_ minutes: Double) -> Void) {
         // use a sortDescriptor to get the recent data first (optional)
         let sortDescriptor = NSSortDescriptor (
             key: HKSampleSortIdentifierEndDate,
@@ -96,19 +97,36 @@ class HealthKitData {
         let predicate = HKQuery.predicateForSamples(withStart: startDate, end: endDate, options: [])
         
         // Create the HealthKit Query
+        
+        /*
         let query = HKSampleQuery (
             sampleType: mindfulType!,
             predicate: predicate,
             limit: 0,
             sortDescriptors: [sortDescriptor],
             resultsHandler: updateMeditationTime
-        )
+        )*/
+        let query = HKSampleQuery(sampleType: mindfulType!, predicate: predicate, limit: 0, sortDescriptors:[sortDescriptor]) {
+            query, results, error in
+            if error != nil {
+                return
+            }
+            let totalMeditationTime = results?.map(self.calculateTotalTime).reduce(0, { $0 + $1 }) ?? 0
+            
+            print("\n Total: \(totalMeditationTime)")
+            
+            DispatchQueue.main.async {
+                completion(totalMeditationTime/60)
+            }
+            print("total meditation time in minutes: \(totalMeditationTime/60)")
+        }
+    
         //Execute our query
         healthStore.execute(query)
     }
     
     // Sum the meditation time
-    func updateMeditationTime(query: HKSampleQuery, results: [HKSample]?, error: Error?) {
+    func updateMeditationTime(query: HKSampleQuery, results: [HKSample]?, error: Error?){
         if error != nil {return}
         
         let totalMeditationTime = results?.map(calculateTotalTime).reduce(0, { $0 + $1 }) ?? 0
@@ -116,6 +134,7 @@ class HealthKitData {
         print("\n Total: \(totalMeditationTime)")
         
         renderMeditationMinuteText(totalMeditationSeconds: totalMeditationTime)
+        print("total meditation time in minutes: \(totalMeditationTime/60)")
     }
     
     func calculateTotalTime(sample: HKSample) -> TimeInterval {

@@ -26,6 +26,7 @@ class ActivityLogViewController: UIViewController {
     @IBOutlet var hoursLoggedLabel: UILabel!
     
     var steps: Double = 0
+    var minutes: Double = 0
     //var storedActivity: Activity? = nil
 
     override func viewDidLoad() {
@@ -41,6 +42,11 @@ class ActivityLogViewController: UIViewController {
         healthKit.retrieveStepCount {
             (steps) in
             self.steps = steps
+            self.updateUI()
+        }
+        healthKit.retrieveMindfulnessMinutes {
+            (minutes) in
+            self.minutes = minutes
             self.updateUI()
         }
     }
@@ -68,8 +74,8 @@ class ActivityLogViewController: UIViewController {
     func updateUI() {
         print("steps: \(steps)")
         stepCountLabel.text = "🏃‍♀️ Step Count: \(steps) steps"
-        print("days: \(activites.count)")
-        daysLoggedLabel.text = "🗓 Days Logged: \(activites.count) days"
+        print("days: \(minutes)")
+        hoursLoggedLabel.text = "🧘‍♀️ Total Mindfulness Minutes Logged: \(minutes) minutes"
     }
     
     func loadActivities() {
