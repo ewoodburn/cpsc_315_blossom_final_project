@@ -22,6 +22,7 @@ class MoodHomeViewController: UIViewController {
     var lastStreakEndDate: NSDate!
     var streakTotal: Int!
     
+    let dateFormatter = DateFormatter()
     @IBOutlet var labels: [UILabel]!
     
     @IBOutlet var emojiLabels: [UILabel]!
@@ -58,6 +59,7 @@ class MoodHomeViewController: UIViewController {
         for i in 1...7 {
             let weekDayNum: Int = cal.component(.weekday, from: date)
             weekdays.append(weekDayNum)
+            date = cal.date(byAdding: .day, value: -1, to: date)!
         }
         
         for i in 0..<weekdays.count {
@@ -84,45 +86,44 @@ class MoodHomeViewController: UIViewController {
             var dateString = "\(year)-\(month)-\(day)"
             dateStringArray.append(dateString)
             print("datestring: \(dateString)")
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy/MM/dd"
-            if let currDate = dateFormatter.date(from: dateString){
-                dateArray.append(currDate)
-                print("currDate: \(currDate)")
+
+            print("calling checkMoodArray")
+            if let newEmoji = checkMoodArray(dateString: dateString) {
+                // update the right labels
             }
+            date = cal.date(byAdding: .day, value: -1, to: date)!
         }
-        
+    }
+    
+    func checkMoodArray(dateString: String) -> String? {
         for mood in moods {
-            for dateString in dateStringArray{
-                if let currDate = mood.dateLogged as? Date{
-                    
-                    
-                    var currWeekday = cal.component(.weekday, from: date)
-                    
-                    let dateFormatter = DateFormatter()
-                    dateFormatter.dateFormat = "yyyy-MM-dd"
-                    let moodDateString = dateFormatter.string(from: currDate)
-                    
-                    
-                    print("here is the current date we're on: \(moodDateString)")
-                    
-                    if dateString == moodDateString{
-                        print("they are the same")
-                        print("dateString: \(dateString)")
-                        if let currMoodWhenMatching = mood.moodEmoji{
-                            weekMoods[currWeekday-1].append(currMoodWhenMatching)
-                            print("currModdWhenMatching: \(currMoodWhenMatching)")
-                        }
-                        
-                    }
-                }
+            if let currDate = mood.dateLogged as? Date {
+        
+                //var currWeekday = cal.component(.weekday, from: date)
                 
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "yyyy-MM-dd"
+                let moodDateString = dateFormatter.string(from: currDate)
+                
+                
+                print("here is the current date we're on: \(moodDateString)")
+                
+                if dateString == moodDateString{
+                    print("they are the same")
+                    print("dateString: \(dateString)")
+                    if let currMoodWhenMatching = mood.moodEmoji {
+                        print("currModdWhenMatching: \(currMoodWhenMatching)")
+                        return currMoodWhenMatching
+                    }
+                    
+                }
             }
             
+            
         }
-        
+        return nil
     }
-        
+    
     @IBAction func moodHistoryButtonPressed(_ sender: UIButton) {
         print("mood history button pressed")
     }

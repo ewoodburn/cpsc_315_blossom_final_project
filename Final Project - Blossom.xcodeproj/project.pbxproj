@@ -22,8 +22,8 @@
 		4B56747B21A64DD8007C1B70 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B56747A21A64DD8007C1B70 /* HealthKit.framework */; };
 		4B5674CB21B4E991007C1B70 /* ActivityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5674CA21B4E991007C1B70 /* ActivityDetailViewController.swift */; };
 		4B5674CD21B4F25F007C1B70 /* ResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5674CC21B4F25F007C1B70 /* ResourcesViewController.swift */; };
-		4B8A5BCC21C0C4F100E81184 /* DaysOfWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8A5BCB21C0C4F100E81184 /* DaysOfWeek.swift */; };
 		CA17431E21B46C9300A90719 /* HealthKitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA17431D21B46C9300A90719 /* HealthKitData.swift */; };
+		CA708FF121C0DF42000F639B /* MoodEmojis.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA708FF021C0DF42000F639B /* MoodEmojis.swift */; };
 		CAFE56DE21A8801E00BD8BF9 /* Mood+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE56DC21A8801E00BD8BF9 /* Mood+CoreDataClass.swift */; };
 		CAFE56DF21A8801E00BD8BF9 /* Mood+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE56DD21A8801E00BD8BF9 /* Mood+CoreDataProperties.swift */; };
 		CAFE56E121A8807200BD8BF9 /* MoodHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFE56E021A8807200BD8BF9 /* MoodHomeViewController.swift */; };
@@ -52,8 +52,8 @@
 		4B56747A21A64DD8007C1B70 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		4B5674CA21B4E991007C1B70 /* ActivityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailViewController.swift; sourceTree = "<group>"; };
 		4B5674CC21B4F25F007C1B70 /* ResourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesViewController.swift; sourceTree = "<group>"; };
-		4B8A5BCB21C0C4F100E81184 /* DaysOfWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysOfWeek.swift; sourceTree = "<group>"; };
 		CA17431D21B46C9300A90719 /* HealthKitData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitData.swift; sourceTree = "<group>"; };
+		CA708FF021C0DF42000F639B /* MoodEmojis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodEmojis.swift; sourceTree = "<group>"; };
 		CAFE56DC21A8801E00BD8BF9 /* Mood+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mood+CoreDataClass.swift"; sourceTree = "<group>"; };
 		CAFE56DD21A8801E00BD8BF9 /* Mood+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mood+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CAFE56E021A8807200BD8BF9 /* MoodHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodHomeViewController.swift; sourceTree = "<group>"; };
@@ -110,11 +110,11 @@
 				4B56746621A0F1CE007C1B70 /* LogNewActivityViewController.swift */,
 				4B56746421A0E9FD007C1B70 /* ActivityLogViewController.swift */,
 				CAFE56E021A8807200BD8BF9 /* MoodHomeViewController.swift */,
-				4B8A5BCB21C0C4F100E81184 /* DaysOfWeek.swift */,
 				CAFE56EA21A8E54300BD8BF9 /* MoodHistoryTableViewController.swift */,
 				CAFE56E821A8D9AC00BD8BF9 /* MoodHistoryTableViewCell.swift */,
 				CAFE56E621A8954700BD8BF9 /* LogMoodViewController.swift */,
 				CAFE56E421A88F7500BD8BF9 /* Moods.swift */,
+				CA708FF021C0DF42000F639B /* MoodEmojis.swift */,
 				CA17431D21B46C9300A90719 /* HealthKitData.swift */,
 				4B56745721A0E3CB007C1B70 /* Assets.xcassets */,
 				4B56745921A0E3CB007C1B70 /* LaunchScreen.storyboard */,
@@ -217,6 +217,7 @@
 				CAFE56DE21A8801E00BD8BF9 /* Mood+CoreDataClass.swift in Sources */,
 				CAFE56EB21A8E54300BD8BF9 /* MoodHistoryTableViewController.swift in Sources */,
 				4B56746321A0E642007C1B70 /* LoginViewController.swift in Sources */,
+				CA708FF121C0DF42000F639B /* MoodEmojis.swift in Sources */,
 				CAFE56E721A8954700BD8BF9 /* LogMoodViewController.swift in Sources */,
 				4B56746721A0F1CE007C1B70 /* LogNewActivityViewController.swift in Sources */,
 				4B56744E21A0E3CA007C1B70 /* AppDelegate.swift in Sources */,
@@ -225,7 +226,6 @@
 				4B56745621A0E3CA007C1B70 /* Final_Project___Blossom.xcdatamodeld in Sources */,
 				CAFE56E121A8807200BD8BF9 /* MoodHomeViewController.swift in Sources */,
 				CAFE56E921A8D9AD00BD8BF9 /* MoodHistoryTableViewCell.swift in Sources */,
-				4B8A5BCC21C0C4F100E81184 /* DaysOfWeek.swift in Sources */,
 				4B5674CD21B4F25F007C1B70 /* ResourcesViewController.swift in Sources */,
 				4B56747521A6404A007C1B70 /* Activity+CoreDataProperties.swift in Sources */,
 			);

@@ -17,6 +17,7 @@ class LogMoodViewController: UIViewController, UITextViewDelegate {
     // the new mood that will be stored
     var newMood: Mood? = nil
     var currentMood: Moods? = nil
+    var newMoodEmoji: MoodEmojis? = nil
     var personalNotesString: String? = nil
     
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -43,6 +44,7 @@ class LogMoodViewController: UIViewController, UITextViewDelegate {
     @IBAction func veryBadButtonPressed(_ sender: UIButton) {
         print("very bad button pressed")
         currentMood = .very_bad
+        newMoodEmoji = .very_bad
         updateCurrentMoodLabel(currentMood: currentMood)
     }
     
@@ -50,12 +52,14 @@ class LogMoodViewController: UIViewController, UITextViewDelegate {
     @IBAction func badButtonPressed(_ sender: UIButton) {
         print("bad button pressed")
         currentMood = .bad
+        newMoodEmoji = .bad
         updateCurrentMoodLabel(currentMood: currentMood)
     }
     
     @IBAction func moderateButtonPressed(_ sender: UIButton) {
         print("moderate button pressed")
         currentMood = .moderate
+        newMoodEmoji = .moderate
         updateCurrentMoodLabel(currentMood: currentMood)
     }
     
@@ -63,6 +67,7 @@ class LogMoodViewController: UIViewController, UITextViewDelegate {
     @IBAction func goodButtonPressed(_ sender: UIButton) {
         print("good button pressed")
         currentMood = .good
+        newMoodEmoji = .good
         updateCurrentMoodLabel(currentMood: currentMood)
     }
     
@@ -70,6 +75,7 @@ class LogMoodViewController: UIViewController, UITextViewDelegate {
     @IBAction func veryGoodButtonPressed(_ sender: UIButton) {
         print("very good button pressed")
         currentMood = .very_good
+        newMoodEmoji = .very_good
         updateCurrentMoodLabel(currentMood: currentMood)
     }
     
@@ -96,10 +102,10 @@ class LogMoodViewController: UIViewController, UITextViewDelegate {
         // Pass the selected object to the new view controller.
         if segue.identifier == "SaveMoodUnwindSegue" {
             print("preparing SaveMoodUnwindSegue")
-            if let mood = currentMood {
+            if let mood = currentMood, let moodEm = newMoodEmoji {
                 var userMood = Mood(context: context)
                 userMood.moodString = mood.rawValue
-                //userMood.moodEmoji = 
+                userMood.moodEmoji = moodEm.rawValue
                 if personalNotesTextView.hasText {
                     userMood.personalNotes = personalNotesTextView.text
                 } else {
