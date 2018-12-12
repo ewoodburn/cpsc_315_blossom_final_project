@@ -385,6 +385,13 @@
                         <outletCollection property="labels" destination="TCI-Qn-dFP" collectionClass="NSMutableArray" id="2Ky-N8-55W"/>
                         <outletCollection property="labels" destination="Jql-FG-wLX" collectionClass="NSMutableArray" id="Sb6-g8-BK9"/>
                         <outletCollection property="labels" destination="kzT-o5-tfV" collectionClass="NSMutableArray" id="oJr-jw-XIs"/>
+                        <outletCollection property="emojiLabels" destination="FtS-ve-k03" collectionClass="NSMutableArray" id="jBQ-qO-HWd"/>
+                        <outletCollection property="emojiLabels" destination="Am7-k7-zRL" collectionClass="NSMutableArray" id="F0d-gr-m2Y"/>
+                        <outletCollection property="emojiLabels" destination="zi3-yk-d3g" collectionClass="NSMutableArray" id="njD-nI-mjt"/>
+                        <outletCollection property="emojiLabels" destination="RBn-nI-494" collectionClass="NSMutableArray" id="ynD-ZG-l3s"/>
+                        <outletCollection property="emojiLabels" destination="TSj-cH-Gfu" collectionClass="NSMutableArray" id="OQQ-FQ-xwX"/>
+                        <outletCollection property="emojiLabels" destination="H0r-xQ-sDt" collectionClass="NSMutableArray" id="JrV-dt-jIk"/>
+                        <outletCollection property="emojiLabels" destination="SO2-cA-SZW" collectionClass="NSMutableArray" id="2gT-Wh-aEY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nOU-Bh-i19" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -17,10 +17,14 @@ class MoodHomeViewController: UIViewController {
 
     var moodDates:[Date] = []
     
+    var weekMoods:[String] = []
+    
     var lastStreakEndDate: NSDate!
     var streakTotal: Int!
     
     @IBOutlet var labels: [UILabel]!
+    
+    @IBOutlet var emojiLabels: [UILabel]!
 
 
     override func viewDidLoad() {
@@ -44,10 +48,29 @@ class MoodHomeViewController: UIViewController {
         var date = cal.startOfDay(for: Date())
         var days = [Int]()
         var weekdays = [Int]()
+        
+        var dateArray = [Date]()
+        
+        var dateStringArray = [String]()
+        
         for i in 1...7 {
             let day = cal.component(.day, from: date)
             let month = cal.component(.month, from: date)
             let year = cal.component(.year, from: date)
+            
+            var dateString = "\(year)-\(month)-\(day)"
+            dateStringArray.append(dateString)
+            print("datestring: \(dateString)")
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy/MM/dd"
+            if let currDate = dateFormatter.date(from: dateString){
+                dateArray.append(currDate)
+                print("currDate: \(currDate)")
+            }
+        
+            
+            
+            
             let weekDayNum: Int = cal.component(.weekday, from: date)
             weekdays.append(weekDayNum)
             print("DATE: ")
@@ -59,6 +82,33 @@ class MoodHomeViewController: UIViewController {
         print("DAYS: \(days)")
         print("current weekday: \(cal.component(.weekday, from: date))")
         print("")
+        
+        
+        print("daaaaates: \(dateArray)")
+        
+        for mood in moods{
+            for dateString in dateStringArray{
+                if let currDate = mood.dateLogged as? Date{
+                    
+                    
+                    var currWeekday = cal.component(.weekday, from: date)
+                    
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateFormat = "yyyy-MM-dd"
+                    let moodDateString = dateFormatter.string(from: currDate)
+                    
+                    
+                    print("here is the current date we're on: \(moodDateString)")
+                    print("yay date: \(dateString)")
+
+                    if dateString == moodDateString{
+                        print("they are the same")
+                        print("dateString: \(dateString)")
+                    }
+                }
+                
+            }
+        }
         
         var daysArray = ["Sun", "Mon", "Tues", "Wed", "Thu", "Fri", "Sat"]
         
