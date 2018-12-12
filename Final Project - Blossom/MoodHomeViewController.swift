@@ -17,7 +17,7 @@ class MoodHomeViewController: UIViewController {
 
     var moodDates:[Date] = []
     
-    var weekMoods:[String] = []
+    var weekMoods:[String] = ["-","-","-","-","-","-","-"]
     
     var lastStreakEndDate: NSDate!
     var streakTotal: Int!
@@ -26,7 +26,7 @@ class MoodHomeViewController: UIViewController {
     
     @IBOutlet var emojiLabels: [UILabel]!
     
-
+    var daysArray = ["Sun", "Mon", "Tues", "Wed", "Thu", "Fri", "Sat"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,11 +43,33 @@ class MoodHomeViewController: UIViewController {
             alertController.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
             present(alertController, animated: true, completion: nil)
         }
-        
-        
+        updateEmojisView()
+        updateWeekLabels()
+
+   
+    }
+    
+    func updateWeekLabels() {
+        print("UPDATING THE WEEK LABELS")
         let cal = Calendar.current
         var date = cal.startOfDay(for: Date())
-        var days = [Int]()
+        var weekdays = [Int]()
+        
+        for i in 1...7 {
+            let weekDayNum: Int = cal.component(.weekday, from: date)
+            weekdays.append(weekDayNum)
+        }
+        
+        for i in 0..<weekdays.count {
+            labels[i].text = daysArray[weekdays[i]-1]
+            emojiLabels[i].text = weekMoods[i]
+        }
+    }
+    
+    func updateEmojisView() {
+        print("UPDATING THE EMOJIS VIEW")
+        let cal = Calendar.current
+        var date = cal.startOfDay(for: Date())
         var weekdays = [Int]()
         
         var dateArray = [Date]()
@@ -68,26 +90,9 @@ class MoodHomeViewController: UIViewController {
                 dateArray.append(currDate)
                 print("currDate: \(currDate)")
             }
-        
-            
-            
-            
-            let weekDayNum: Int = cal.component(.weekday, from: date)
-            weekdays.append(weekDayNum)
-            print("DATE: ")
-            print("\(month)/\(day)/\(year)")
-            days.append(day)
-            date = cal.date(byAdding: .day, value: -1, to: date)!
         }
-        print("")
-        print("DAYS: \(days)")
-        print("current weekday: \(cal.component(.weekday, from: date))")
-        print("")
         
-        
-        print("daaaaates: \(dateArray)")
-        
-        for mood in moods{
+        for mood in moods {
             for dateString in dateStringArray{
                 if let currDate = mood.dateLogged as? Date{
                     
@@ -100,57 +105,24 @@ class MoodHomeViewController: UIViewController {
                     
                     
                     print("here is the current date we're on: \(moodDateString)")
-                    print("yay date: \(dateString)")
-
+                    
                     if dateString == moodDateString{
                         print("they are the same")
                         print("dateString: \(dateString)")
                         if let currMoodWhenMatching = mood.moodEmoji{
                             weekMoods[currWeekday-1].append(currMoodWhenMatching)
-                        } else{
-                            if let currMoodWhenMatching = mood.moodEmoji{
-                                weekMoods[currWeekday-1].append("-")
-                                
-                            }
+                            print("currModdWhenMatching: \(currMoodWhenMatching)")
                         }
+                        
                     }
                 }
                 
             }
+            
         }
         
-        var daysArray = ["Sun", "Mon", "Tues", "Wed", "Thu", "Fri", "Sat"]
-        
-        
-        
-        //let weekDayNum: Int = cal.component(.weekday, from: date)
-        for i in 0..<weekdays.count {
-            labels[i].text = daysArray[weekdays[i]-1]
-            emojiLabels[i].text = weekMoods[i]
-        }
-        var currDay = ""
-        /*switch weekDayNum {
-        case 1:
-            currDay = daysArray[0]
-            labels[0].text = currDay
-        case 2:
-            currDay = daysArray[1]
-        case 3:
-            currDay = daysArray[2]
-        case 4:
-            currDay = daysArray[3]
-        case 5:
-            currDay = daysArray[4]
-        case 6:
-            currDay = daysArray[5]
-        default:
-            currDay = daysArray[6]
-        }*/
-        
-        print("CURR DAY: \(currDay)")
     }
-    
-
+        
     @IBAction func moodHistoryButtonPressed(_ sender: UIButton) {
         print("mood history button pressed")
     }
