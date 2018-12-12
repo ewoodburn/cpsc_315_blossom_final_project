@@ -76,6 +76,7 @@ class ActivityLogViewController: UIViewController {
         stepCountLabel.text = "🏃‍♀️ Step Count: \(steps) steps"
         print("days: \(minutes)")
         hoursLoggedLabel.text = "🧘‍♀️ Total Mindfulness Minutes Logged: \(minutes) minutes"
+        daysLoggedLabel.text = "🗓 Days Logged: \(activites.count) days"
     }
     
     func loadActivities() {
